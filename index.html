@@ -1,0 +1,33 @@
+<html>
+ <head>
+    <title>Home</title>
+ </head>
+ <style>
+    h1{
+        text-align: center;
+        color:green
+    }
+ </style>
+ <body>
+<h1>Type the password :)</h1>
+
+<form style="text-align: center;">
+    <label class="pass" for="pswd">Enter password: </label>
+    <input type="password" id="pswd">
+    <input class="pass" type="button" value="Submit" onclick="checkPswd();" />
+</form>
+
+ </body>
+ <script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="chat.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
+</html>
